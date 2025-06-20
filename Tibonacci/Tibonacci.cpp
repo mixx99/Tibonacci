@@ -62,8 +62,8 @@ void Tibonacci::push_back_start_number(int number) {
   fibonacci_numbers.push_back(0);
   /*
   0 needs because we need to keep both vectors the same size
-  Maybe we should count Fibonacci number instantly to save our invariant a[i] =
-  F(b[i])? Probably not because it'll hit perfomance
+  Maybe we should calculate Fibonacci number instantly to save our invariant a[i] = F(b[i])?
+  Probably not because it'll hit perfomance
   */
 }
 
