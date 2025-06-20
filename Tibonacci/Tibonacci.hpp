@@ -1,15 +1,12 @@
 #pragma once
 
 // std
-#include <thread>
-#include <mutex>
 #include <vector>
-#include <atomic>
-#include <stdexcept>
+#include <cstdint>
 
 namespace TIB{
   class Tibonacci{
-    std::vector<int> start_numbers; // int?
+    std::vector<int> start_numbers;
     std::vector<uint64_t> fibonacci_numbers;
 
     uint64_t calculate_fib(int n) const;
@@ -26,6 +23,7 @@ namespace TIB{
     std::vector<int> get_start_numbers()          const { return start_numbers; }
     std::vector<uint64_t> get_fibonacci_numbers() const { return fibonacci_numbers; }
     uint64_t get_fibonacci_number(size_t index)   const { return fibonacci_numbers[index]; }
-    size_t get_start_number(size_t index) const { return start_numbers[index]; }
+    int get_start_number(size_t index) const { return start_numbers[index]; }
+    void clear_all(){ start_numbers.clear(); fibonacci_numbers.clear(); }
   };
 }

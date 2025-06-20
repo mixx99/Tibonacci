@@ -1,5 +1,8 @@
 #include "Tibonacci.hpp"
 
+// std
+#include <thread>
+#include <stdexcept>
 #include <iostream>
 
 namespace TIB{
@@ -46,7 +49,7 @@ namespace TIB{
     if(n >= 93)
       throw std::invalid_argument("Fibonacci number is too large");
     if(n <= 2) return 1;
-    for(int i = 2; i < n; ++i){
+    for(int i = 3; i <= n; ++i){
       b += a;
       a = b - a;
     }
