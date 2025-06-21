@@ -4,8 +4,8 @@
 
 #pragma once
 
-#include <stdlib.h>
-#include <time.h>
+#include <cstdlib>
+#include <ctime>
 
 #ifdef _MSC_VER
 #include <intrin.h>  // for _ReadWriteBarrier
