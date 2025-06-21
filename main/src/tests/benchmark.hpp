@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../thirdparty/simple-bench.h"
-#include <tibonacci.hpp>
+#include "simple-bench.h"
+#include <Tibonacci.hpp>
 
 // std
 #include <algorithm>

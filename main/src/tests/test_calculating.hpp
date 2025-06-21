@@ -1,7 +1,7 @@
 #pragma once
 
 #include "benchmark.hpp"
-#include <tibonacci.hpp>
+#include <Tibonacci.hpp>
 // std
 #include <cstdint>
 #include <ctime>
