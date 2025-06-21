@@ -7,6 +7,8 @@
 #include <algorithm>
 #include <ctime>
 #include <iostream>
+#include <iomanip>
+
 namespace Tests {
 void fill_tib(TIB::Tibonacci &tib, int size_to_fill) {
   tib.clear_all();
@@ -16,11 +18,6 @@ void fill_tib(TIB::Tibonacci &tib, int size_to_fill) {
 
 void benchmark(int number_of_elements = 10000, int tests = 10,
                int number_of_threads = 5) {
-  std::cout << "Benchmarking TIB::Tibonacci" << std::endl;
-  std::cout << "Number of elements = " << number_of_elements << std::endl;
-  std::cout << "Number of tests: " << tests << std::endl;
-  std::cout << "Number of using threads " << number_of_threads << std::endl;
-  srand(time(NULL));
 
   if (number_of_elements == 0)
     number_of_elements = 10000;
@@ -28,6 +25,12 @@ void benchmark(int number_of_elements = 10000, int tests = 10,
     tests = 10;
   if (number_of_threads == 0)
     number_of_threads = 5;
+
+  std::cout << "Benchmarking TIB::Tibonacci" << std::endl;
+  std::cout << "Number of elements = " << number_of_elements << std::endl;
+  std::cout << "Number of tests: " << tests << std::endl;
+  std::cout << "Number of using threads " << number_of_threads << std::endl;
+  srand(time(NULL));
 
   double with_threads_result = 0;
   double without_threads_result = 0;
@@ -57,6 +60,6 @@ void benchmark(int number_of_elements = 10000, int tests = 10,
             << " seconds. " << std::endl;
   std::cout << "Difference is "
             << std::abs(with_threads_result - without_threads_result)
-            << " seconds." << std::endl;
+            << " seconds. ~" << std::setprecision(2) << without_threads_result / with_threads_result << "x"<< std::endl;
 }
 } // namespace Tests
