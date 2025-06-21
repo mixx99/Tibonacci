@@ -40,6 +40,7 @@ void test_calculating(int number_of_tests = 10, int max_number_of_threads = 5) {
       uint64_t tib_result = tib.get_fibonacci_number(j);
       uint64_t my_result = get_fib_number(tib.get_start_number(j));
       if (tib_result != my_result) {
+        errors++;
         std::cout << "ERROR IN TEST:" << std::endl;
         std::cout << "\tRequired Fibonacci number: " << tib.get_start_number(j)
                   << std::endl;
@@ -63,6 +64,7 @@ void test_calculating(int number_of_tests = 10, int max_number_of_threads = 5) {
       uint64_t tib_result = tib.get_fibonacci_number(j);
       uint64_t my_result = get_fib_number(tib.get_start_number(j));
       if (tib_result != my_result) {
+        errors++;
         std::cout << "ERROR IN TEST:" << std::endl;
         std::cout << "\tRequired Fibonacci number: " << tib.get_start_number(j)
                   << std::endl;
